@@ -1,0 +1,175 @@
+@charset "UTF-8";
+html{
+	font-family: "Segoe UI Light", "Segoe UI", sans-serif;
+	color:#333;
+	font-size: 1em;
+}
+h1{font-size: 1.4em; text-transform: uppercase; }
+h2{font-size: 1.2em; text-transform: uppercase;}
+h3{font-size: 1.0em; text-transform: uppercase;}
+h4{font-size: 1.2em; font-variant: small-caps; font-weight: 300;}
+h5{font-size: 1.1em; font-variant: small-caps; font-weight: 300;}
+h6{font-size: 1.0em; font-variant: small-caps; font-weight: 300;}
+table{ border-collapse:collapse; }
+
+a { color: inherit; }
+nav a { text-decoration: none; }
+
+/* --- Positions - Navigation --- */
+
+body {
+	max-width: 1200px;
+	box-shadow: 0 0 16px #444;
+	margin: 0 auto;
+	min-height: 100vh;
+}
+
+
+main > section {
+	display: none;
+}
+main > section:target {
+	display: block;
+}
+
+
+/* --- Entête - Menu --- */
+body > header {
+	background-color: #eee;	
+}
+body > header h1 {
+	margin: 0; 
+	padding: 1rem 2rem; 
+
+}
+
+
+body > nav {
+	--border: 1px solid darkred;
+	--width: 140px;
+	background-color: #ddd;
+	padding: 0 2rem;
+}
+body > nav a {
+	display: inline-block;
+	border-bottom: 3px solid transparent;
+	padding: .5em 1em calc(.5em - 3px);
+}
+body > nav a.active, 
+body > nav a:hover, 
+body > nav a:focus {
+	border-bottom: 3px solid #900;
+	outline: none;
+}
+
+
+/* Tableau : class eni-table */
+.eni-table {
+	min-width: 600px;
+	margin:0 auto;
+	border:solid 1px #ccc;
+	border-spacing: 0;
+	border-collapse: collapse;
+	caption-side: top;
+	box-shadow:0px 20px 40px -10px #000;
+}
+.eni-table caption {
+	margin: .2em;
+	text-align: right;
+	font-style: italic;
+}
+.eni-table thead {
+	background-color: #dddddd;
+	background-image: linear-gradient(180deg, #eeeeee, #dddddd);
+}
+.eni-table tbody {
+	background-color: white;
+	cursor: pointer;
+}
+.eni-table tbody>tr:nth-child(even){
+	background-color: #f8f8f8;
+}
+.eni-table tbody > tr:nth-child(odd){
+	background-color: #f0f0f0;
+}
+.eni-table tbody tr.selected {
+	background-color: #999;
+	color: #fff;
+}
+.eni-table tbody>tr:hover{
+	background-color: #bbd;
+}
+.eni-table tbody>tr.selected:hover {
+	background-color: #669;
+}
+.eni-table th, .eni-table td {
+	padding: 0.6em 1em;
+}
+.eni-table tbody td {
+	border-right:1px solid #ccc;
+	border-left:1px solid #ccc;
+}
+.eni-table tfoot td {
+	text-align: center;
+}
+
+.eni-table .controls{
+	margin-top:30px;
+	text-align: center;
+}
+.eni-table.operations tbody td:nth-child(1) { text-align: center; }
+.eni-table.operations tbody td:nth-child(2) { text-align: left; }
+.eni-table.operations tbody td:nth-child(3) { text-align: right; }
+.eni-table.operations tbody td:nth-child(4) { text-align: center; }
+
+/* Formulaire : class eni-form */
+.eni-form {
+	margin: auto;
+	max-width: 600px;
+}
+.eni-form label:first-of-type, .eni-form br+label{
+	display: inline-block;
+	width: 100px;
+	height: 22px;
+	margin-bottom: .5em;
+}
+
+.eni-form input, .eni-form select {
+	border: 0px solid transparent;
+	border-left: 5px solid #ddd;
+	box-shadow: 0 0 4px #666;
+}
+.eni-form .erreur, input:invalid {
+	border-left-color: #c00;
+}
+.eni-form .valide, input:valid {
+	border-left-color: #090;
+}
+
+
+ listeClients thead {
+	display: block;
+}
+
+ listeClients tbody {
+	display: block;
+	height: 6em;
+	overflow-y: scroll;
+}
+
+ listeClients th,  listeClients td  {
+	width: 50%;
+}
+
+
+h1.joliTitre {
+
+	color: #ff6;
+	background-color: #339;
+	text-align: center;
+
+}
+
+
+
+
